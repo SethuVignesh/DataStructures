@@ -28,7 +28,7 @@ int size;
 
     public boolean append(int data){
         Node node = new Node (data);
-        if(head ==null){
+        if(isEmpty()){
             head= node;
             size++;
             return true;

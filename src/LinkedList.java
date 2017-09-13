@@ -1,8 +1,9 @@
 public class LinkedList {
-
+Node head;
+int size;
     public class Node{
         int data;
-        Node node;
+        Node next;
 
         public int getData() {
             return data;
@@ -12,18 +13,42 @@ public class LinkedList {
             this.data = data;
         }
 
-        public Node getNode() {
-            return node;
+        public Node getNext() {
+            return next;
         }
 
-        public void setNode(Node node) {
-            this.node = node;
+        public void setNext(Node next) {
+            this.next = next;
         }
 
-        public Node(int data, Node node){
+        public Node(int data){
             this.data=data;
-            this.node=node;
-
         }
     }
+
+    public boolean append(int data){
+        Node node = new Node (data);
+        if(head ==null){
+            head= node;
+            size++;
+            return true;
+        }else{
+            Node temp =head;
+            while(temp.getNext()!=null){
+
+                temp=temp.getNext();
+            }
+            temp.setNext(node);
+            size++;
+            return true;
+        }}
+public void traverse(){
+        Node temp= head;
+        while (temp!=null){
+            System.out.println(temp.getData());
+        temp=temp.getNext();
+        }
+
+    }
+
 }

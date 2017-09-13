@@ -54,4 +54,19 @@ public void traverse(){
     return head==null;
     }
 
+    public boolean delete(int data){
+        if(isEmpty()==false){
+        Node temp= head;
+        Node prev= head;
+        while (temp!=null && temp.getData()==data){
+            temp = temp.getNext();
+        }
+        if(temp==null){
+            System.out.println("Data not exist");
+            return false;
+        }else{
+            prev.setNext(temp.getNext());
+            return true;
+        }
+    }else{    System.out.println("Data not exist"); return false;}}
 }

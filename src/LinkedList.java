@@ -50,5 +50,8 @@ public void traverse(){
         }
 
     }
+    public boolean isEmpty(){
+    return head==null;
+    }
 
 }

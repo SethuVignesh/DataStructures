@@ -2,30 +2,7 @@ public class LinkedList {
     Node head;
     int size;
 
-    public class Node {
-        int data;
-        Node next;
 
-        public int getData() {
-            return data;
-        }
-
-        public void setData(int data) {
-            this.data = data;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
-            this.next = next;
-        }
-
-        public Node(int data) {
-            this.data = data;
-        }
-    }
 
     public boolean append(int data) {
         Node node = new Node(data);
@@ -49,7 +26,7 @@ public class LinkedList {
     public void traverse() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.getData());
+            System.out.println(temp.next.getData(temp));
             temp = temp.getNext();
         }
     }
@@ -60,7 +37,7 @@ public class LinkedList {
 
     public boolean delete(int data) {
         if (isEmpty() == false) {
-            if (head.getData() == data) {
+            if (head.next.getData(head) == data) {
                 head = head.getNext();
                 size--;
                 return true;
@@ -69,7 +46,7 @@ public class LinkedList {
 
                 Node temp = head;
                 Node prev = head;
-                while (temp != null && temp.getData() != data) {
+                while (temp != null && temp.next.getData(temp) != data) {
                     prev = temp;
                     temp = temp.getNext();
                 }
@@ -99,7 +76,7 @@ public class LinkedList {
                 temp = temp.getNext();
                 i = i + 1;
             }
-            System.out.println(temp.getData());
+            System.out.println(temp.next.getData(temp));
 
 
         } else {

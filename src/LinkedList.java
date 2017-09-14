@@ -60,7 +60,7 @@ int size;
         if(isEmpty()==false){
             if(head.getData()==data){
                 head=head.getNext();
-                size--
+                size--;
                 return true;
 
             }else{

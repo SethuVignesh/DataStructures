@@ -3,7 +3,6 @@ public class LinkedList {
     int size;
 
 
-
     public boolean append(int data) {
         Node node = new Node(data);
         if (isEmpty()) {
@@ -85,15 +84,40 @@ public class LinkedList {
 
     }
 
-    public void insertAtBegin(int data){
-        if(isEmpty()){
-            head= new Node (data);
+    public void insertAtBegin(int data) {
+        if (isEmpty()) {
+            head = new Node(data);
             size++;
-        }else{
-            Node temp= head;
-            head= new Node(data);
+        } else {
+            Node temp = head;
+            head = new Node(data);
             head.setNext(temp);
             size++;
+
+
+        }
+    }
+
+    public void insertAtPos(int data, int pos) {
+        if (pos<=0 || pos > size + 1) {
+            System.out.println("Cannot be inserted at this position");
+            return;
+        }
+        if (pos == 1) {
+            insertAtBegin(data);
+        } else {
+            Node prev = head;
+            Node current = head;
+            int currentPos=1;
+
+            while (current!=null && currentPos!=pos){
+                prev=current;
+                current=current.getNext();
+            }
+            Node temp= new Node(data);
+
+            prev.setNext(temp);
+            temp.setNext(current);
 
 
         }

@@ -19,6 +19,12 @@ public class TestClass {
 //        linkedList.insertAtPos(2,1);
 //        linkedList.insertAtPos(1,1);
 //        linkedList.insertAtPos(3,3);
+
+        linkedList.insertAsc(5);linkedList.traverse();
+        linkedList.insertAsc(6);linkedList.traverse();
+        linkedList.insertAsc(2);linkedList.traverse();
+        linkedList.insertAsc(1);linkedList.traverse();
+        linkedList.insertAsc(3);
         linkedList.traverse();
     }
 }

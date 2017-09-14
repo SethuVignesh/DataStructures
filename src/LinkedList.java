@@ -25,9 +25,10 @@ public class LinkedList {
     public void traverse() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.getData());
+            System.out.print(temp.getData());
             temp = temp.getNext();
         }
+        System.out.println();
     }
 
     public boolean isEmpty() {
@@ -99,7 +100,7 @@ public class LinkedList {
     }
 
     public void insertAtPos(int data, int pos) {
-        if (pos<=0 || pos > size + 1) {
+        if (pos <= 0 || pos > size + 1) {
             System.out.println("Cannot be inserted at this position");
             return;
         }
@@ -108,18 +109,37 @@ public class LinkedList {
         } else {
             Node prev = head;
             Node current = head;
-            int currentPos=1;
+            int currentPos = 1;
 
-            while (current!=null && currentPos!=pos){
-                prev=current;
-                current=current.getNext();
+            while (current != null && currentPos != pos) {
+                prev = current;
+                current = current.getNext();
             }
-            Node temp= new Node(data);
+            Node temp = new Node(data);
 
             prev.setNext(temp);
             temp.setNext(current);
 
 
         }
+    }
+
+    public void insertAsc(int data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            head = newNode;
+            return;
+        }
+
+        Node temp = head;
+        Node prev = null;
+        while (temp != null && temp.getData() < data) {
+            prev = temp;
+            temp = temp.getNext();
+        }
+        if(prev!=null){
+        prev.setNext(newNode);
+        newNode.setNext(temp);}else {head=newNode; newNode.setNext(temp);}
+
     }
 }

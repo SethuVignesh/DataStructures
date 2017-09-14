@@ -42,31 +42,41 @@ int size;
             size++;
             return true;
         }}
-public void traverse(){
-        Node temp= head;
-        while (temp!=null){
-            System.out.println(temp.getData());
-        temp=temp.getNext();
+
+
+        public void traverse(){
+            Node temp= head;
+            while (temp!=null){
+                System.out.println(temp.getData());
+                temp=temp.getNext();
+            }
         }
 
-    }
     public boolean isEmpty(){
     return head==null;
     }
 
     public boolean delete(int data){
         if(isEmpty()==false){
+            if(head.getData()==data){
+                head=head.getNext();
+                size--
+                return true;
+
+            }else{
+
         Node temp= head;
         Node prev= head;
-        while (temp!=null && temp.getData()==data){
+        while (temp!=null && temp.getData()!=data){
+            prev=temp;
             temp = temp.getNext();
         }
         if(temp==null){
             System.out.println("Data not exist");
             return false;
         }else{
-            prev.setNext(temp.getNext());
+            prev.setNext(temp.getNext());size--;
             return true;
-        }
+        }}
     }else{    System.out.println("Data not exist"); return false;}}
 }

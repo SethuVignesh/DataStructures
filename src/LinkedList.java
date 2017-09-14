@@ -26,7 +26,7 @@ public class LinkedList {
     public void traverse() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.next.getData(temp));
+            System.out.println(temp.getData());
             temp = temp.getNext();
         }
     }
@@ -37,7 +37,7 @@ public class LinkedList {
 
     public boolean delete(int data) {
         if (isEmpty() == false) {
-            if (head.next.getData(head) == data) {
+            if (head.getNext().getData() == data) {
                 head = head.getNext();
                 size--;
                 return true;
@@ -46,7 +46,7 @@ public class LinkedList {
 
                 Node temp = head;
                 Node prev = head;
-                while (temp != null && temp.next.getData(temp) != data) {
+                while (temp != null && temp.getNext().getData() != data) {
                     prev = temp;
                     temp = temp.getNext();
                 }
@@ -76,12 +76,26 @@ public class LinkedList {
                 temp = temp.getNext();
                 i = i + 1;
             }
-            System.out.println(temp.next.getData(temp));
+            System.out.println(temp.getNext().getData());
 
 
         } else {
             System.out.println("No data exist");
         }
 
+    }
+
+    public void insertAtBegin(int data){
+        if(isEmpty()){
+            head= new Node (data);
+            size++;
+        }else{
+            Node temp= head;
+            head= new Node(data);
+            head.setNext(temp);
+            size++;
+
+
+        }
     }
 }

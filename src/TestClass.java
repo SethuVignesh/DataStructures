@@ -14,6 +14,8 @@ public class TestClass {
 //        linkedList.delete(1);
 //        linkedList.traverse();
 
-        linkedList.getMiddle();
+//        linkedList.getMiddle();
+        linkedList.insertAtBegin(0);
+        linkedList.traverse();
     }
 }

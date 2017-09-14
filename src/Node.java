@@ -1,6 +1,6 @@
  public class Node {
-        int data;
-        Node next;
+        private int data;
+        private Node next;
 
         public void setData(int data) {
             this.data = data;
@@ -18,7 +18,7 @@
             this.data = data;
         }
 
-        public int getData(Node node) {
-            return node.data;
+        public int getData() {
+            return data;
         }
     }

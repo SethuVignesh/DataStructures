@@ -142,4 +142,5 @@ public class SinglyLinkedList {
         newNode.setNext(temp);}else {head=newNode; newNode.setNext(temp);}
 
     }
+    public void reverse(){}
 }

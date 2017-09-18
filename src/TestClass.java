@@ -1,6 +1,6 @@
 public class TestClass {
     public static void main(String[] args) {
-        LinkedList linkedList= new LinkedList();
+        SinglyLinkedList linkedList= new SinglyLinkedList();
 //        linkedList.delete(1);
 //        linkedList.append(1);
 ////        linkedList.traverse();

@@ -39,24 +39,37 @@ public class DoublyLinkedList {
     }
 
     public void insertAtPos(int data, int pos) {
-        DNode insertNode = head;
-        if (pos > size + 1) {
+        if (pos < 1) {
+            System.out.println("Cannot insert at this position");
+            return;
+        }
+        DNode insertNode = new DNode(data);
+        if (pos > size +1) {
             System.out.println("Cannot insert at this position");
         } else {
 
             if (isEmpty() == false) {
                 int currentPos = 1;
                 DNode temp = head;
-                while (currentPos != pos || currentPos > pos) {
+                while (temp!=null && (currentPos != pos || currentPos > pos)) {
                     currentPos = currentPos + 1;
                     temp = temp.getNext();
                 }
-
-                insertNode.setNext(temp);
-                insertNode.setPrev(temp.getPrev());
-                temp.setPrev(insertNode);
-                insertNode.getPrev().setNext(insertNode);
-
+                if (currentPos == 1) {
+                    insertAtBegin(data);
+                } else {
+                    if (temp == null ) {
+                        if(pos==currentPos)
+                        append(data);else {
+                            System.out.println("Cannot insert at this position"); return;
+                        }
+                    } else {
+                        insertNode.setNext(temp);
+                        insertNode.setPrev(temp.getPrev());
+                        temp.setPrev(insertNode);
+                        insertNode.getPrev().setNext(insertNode);
+                    }
+                }
 
             } else {
                 if (pos == 1) {
@@ -75,24 +88,24 @@ public class DoublyLinkedList {
     }
 
     public void insertAsc(int data) {
-        DNode newNode= new DNode(data);
-        if(isEmpty()){
-            head= newNode;
-        }else {
+        DNode newNode = new DNode(data);
+        if (isEmpty()) {
+            head = newNode;
+        } else {
 
-            DNode temp= head;
-            while (temp!=null && temp.getData()<data){
-                temp=temp.getNext();
+            DNode temp = head;
+            while (temp != null && temp.getData() < data) {
+                temp = temp.getNext();
             }
 
-            if(temp!=null){
+            if (temp != null) {
                 newNode.setNext(temp.getNext());
                 newNode.setPrev(temp);
                 temp.setNext(newNode);
-                if(newNode.getNext()!=null){
+                if (newNode.getNext() != null) {
                     newNode.getNext().setPrev(newNode);
                 }
-            }else{
+            } else {
                 temp.setNext(newNode);
                 newNode.setPrev(temp);
             }
@@ -103,48 +116,60 @@ public class DoublyLinkedList {
     }
 
     public void getMiddle() {
-        DNode temp= head;
+        DNode temp = head;
 
-        if(size>2){
-            int middle= size/2;
-            if(size%2!=0){
-                middle=size/2+1;
+        if (size > 2) {
+            int middle = size / 2;
+            if (size % 2 != 0) {
+                middle = size / 2 + 1;
             }
-            int pos=1;
-            while(pos!=middle || pos>middle){
-                temp= temp.getNext();
+            int pos = 1;
+            while (pos != middle || pos > middle) {
+                temp = temp.getNext();
             }
-            System.out.println("Middle item is "+temp.getData());
-        }else{
-            if(isEmpty()){
+            System.out.println("Middle item is " + temp.getData());
+        } else {
+            if (isEmpty()) {
                 System.out.println("Empty structure");
-            }else{
-                System.out.println("Middle item is "+head.getData());
+            } else {
+                System.out.println("Middle item is " + head.getData());
             }
         }
     }
 
     public void delete(int data) {
-        if(isEmpty()){
+        if (isEmpty()) {
             System.out.println("Item not found");
-        }else{
-            DNode temp= head;
-            while (temp!=null && temp.getData()!=data){
-                temp=temp.getNext();
+        } else {
+            DNode temp = head;
+            while (temp != null && temp.getData() != data) {
+                temp = temp.getNext();
             }
-
-            if(temp!=null){
-                temp.getPrev().setNext(temp.getNext());
-                temp.getNext().setPrev(temp.getPrev());
-                temp.setPrev(null);
-                temp.setNext(null);
-
-
-            }else{
+            if (temp != null) {
+                if (temp.getPrev() == null) {
+                    head = temp.getNext();
+                    head.setPrev(null);
+                } else {
+                    temp.getPrev().setNext(temp.getNext());
+                    temp.getNext().setPrev(temp.getPrev());
+                    temp.setPrev(null);
+                    temp.setNext(null);
+                }
+            } else {
                 System.out.println("Item not found");
             }
 
         }
 
+    }
+
+    public void traverse() {
+        DNode temp = head;
+        while (temp != null) {
+
+            System.out.print(temp.getData() + "--->");
+            temp = temp.getNext();
+        }
+        System.out.println("");
     }
 }

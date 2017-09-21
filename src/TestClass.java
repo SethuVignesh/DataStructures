@@ -51,18 +51,29 @@ public class TestClass {
 //        doublyLinkedList.insertAtPos(5,7);
 //        doublyLinkedList.traverse();
 
-        CircularSinglyLinkedList circularSinglyLinkedList= new CircularSinglyLinkedList();
-//        circularSinglyLinkedList.append(1);
-//        circularSinglyLinkedList.append(2);
-//        circularSinglyLinkedList.append(3);
-        circularSinglyLinkedList.insertAsc(2);circularSinglyLinkedList.traverse();
-        circularSinglyLinkedList.insertAsc(3);circularSinglyLinkedList.traverse();
+//        CircularSinglyLinkedList circularSinglyLinkedList= new CircularSinglyLinkedList();
+////        circularSinglyLinkedList.append(1);
+////        circularSinglyLinkedList.append(2);
+////        circularSinglyLinkedList.append(3);
+//        circularSinglyLinkedList.insertAsc(2);circularSinglyLinkedList.traverse();
+//        circularSinglyLinkedList.insertAsc(3);circularSinglyLinkedList.traverse();
+//
+////        circularSinglyLinkedList.insertAsc(1);
+////        circularSinglyLinkedList.traverse();
+//        circularSinglyLinkedList.insertAsc(5);circularSinglyLinkedList.traverse(); circularSinglyLinkedList.insertAsc(4);circularSinglyLinkedList.traverse();
+//
+//        circularSinglyLinkedList.getMiddle();
 
-//        circularSinglyLinkedList.insertAsc(1);
-//        circularSinglyLinkedList.traverse();
-        circularSinglyLinkedList.insertAsc(5);circularSinglyLinkedList.traverse(); circularSinglyLinkedList.insertAsc(4);circularSinglyLinkedList.traverse();
+        CircularDoublyLinkedList circularDoublyLinkedList= new CircularDoublyLinkedList();
+        circularDoublyLinkedList.append(1);
+        circularDoublyLinkedList.append(2);
+        circularDoublyLinkedList.append(3);
+        circularDoublyLinkedList.append(4);
+//        circularDoublyLinkedList.insertAtBegin(0);
+        circularDoublyLinkedList.insertAtPos(0,5);
 
-        circularSinglyLinkedList.getMiddle();
+        circularDoublyLinkedList.traverse();
+
     }
 
     //READ

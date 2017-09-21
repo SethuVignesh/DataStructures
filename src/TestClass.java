@@ -30,26 +30,39 @@ public class TestClass {
         //DLL TEST
 
         //CREATE
-        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+//        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+////        doublyLinkedList.append(1);
 //        doublyLinkedList.append(1);
-        doublyLinkedList.append(1);
-        doublyLinkedList.append(2);
-        doublyLinkedList.append(3);
-        doublyLinkedList.append(4);
-        doublyLinkedList.traverse();
-//
-        doublyLinkedList.delete(1);
-////        doublyLinkedList.traverse();
+//        doublyLinkedList.append(2);
+//        doublyLinkedList.append(3);
+//        doublyLinkedList.append(4);
+//        doublyLinkedList.traverse();
 ////
-        doublyLinkedList.insertAtBegin(1);
 //        doublyLinkedList.delete(1);
-////        doublyLinkedList.traverse();
-////
-        doublyLinkedList.insertAtBegin(1);
-        doublyLinkedList.traverse();
+//////        doublyLinkedList.traverse();
+//////
+//        doublyLinkedList.insertAtBegin(1);
+////        doublyLinkedList.delete(1);
+//////        doublyLinkedList.traverse();
+//////
+//        doublyLinkedList.insertAtBegin(1);
+//        doublyLinkedList.traverse();
+//
+//        doublyLinkedList.insertAtPos(5,7);
+//        doublyLinkedList.traverse();
 
-        doublyLinkedList.insertAtPos(5,7);
-        doublyLinkedList.traverse();
+        CircularSinglyLinkedList circularSinglyLinkedList= new CircularSinglyLinkedList();
+//        circularSinglyLinkedList.append(1);
+//        circularSinglyLinkedList.append(2);
+//        circularSinglyLinkedList.append(3);
+        circularSinglyLinkedList.insertAsc(2);circularSinglyLinkedList.traverse();
+        circularSinglyLinkedList.insertAsc(3);circularSinglyLinkedList.traverse();
+
+//        circularSinglyLinkedList.insertAsc(1);
+//        circularSinglyLinkedList.traverse();
+        circularSinglyLinkedList.insertAsc(5);circularSinglyLinkedList.traverse(); circularSinglyLinkedList.insertAsc(4);circularSinglyLinkedList.traverse();
+
+        circularSinglyLinkedList.getMiddle();
     }
 
     //READ

@@ -1,3 +1,5 @@
+package ElementaryDS;
+
 public class SinglyLinkedList {
     Node head;
     int size;

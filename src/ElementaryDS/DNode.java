@@ -1,3 +1,5 @@
+package ElementaryDS;
+
 public class DNode {
     private int data;
     private DNode prev;

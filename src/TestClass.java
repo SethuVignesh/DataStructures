@@ -1,6 +1,8 @@
+import ElementaryDS.CircularDoublyLinkedList;
+
 public class TestClass {
     public static void main(String[] args) {
-//        SinglyLinkedList linkedList= new SinglyLinkedList();
+//        ElementaryDS.SinglyLinkedList linkedList= new ElementaryDS.SinglyLinkedList();
 //        linkedList.delete(1);
 //        linkedList.append(1);
 ////        linkedList.traverse();
@@ -30,7 +32,7 @@ public class TestClass {
         //DLL TEST
 
         //CREATE
-//        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+//        ElementaryDS.DoublyLinkedList doublyLinkedList = new ElementaryDS.DoublyLinkedList();
 ////        doublyLinkedList.append(1);
 //        doublyLinkedList.append(1);
 //        doublyLinkedList.append(2);
@@ -51,7 +53,7 @@ public class TestClass {
 //        doublyLinkedList.insertAtPos(5,7);
 //        doublyLinkedList.traverse();
 
-//        CircularSinglyLinkedList circularSinglyLinkedList= new CircularSinglyLinkedList();
+//        ElementaryDS.CircularSinglyLinkedList circularSinglyLinkedList= new ElementaryDS.CircularSinglyLinkedList();
 ////        circularSinglyLinkedList.append(1);
 ////        circularSinglyLinkedList.append(2);
 ////        circularSinglyLinkedList.append(3);

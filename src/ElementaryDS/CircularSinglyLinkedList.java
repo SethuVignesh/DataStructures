@@ -1,3 +1,5 @@
+package ElementaryDS;
+
 public class CircularSinglyLinkedList {
     int size;
     Node head;

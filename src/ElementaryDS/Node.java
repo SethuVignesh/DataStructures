@@ -1,4 +1,6 @@
- public class Node {
+package ElementaryDS;
+
+public class Node {
         private int data;
         private Node next;
 

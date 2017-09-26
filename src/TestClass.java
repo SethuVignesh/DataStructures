@@ -64,14 +64,15 @@ public class TestClass {
 //
 //        circularSinglyLinkedList.getMiddle();
 
-        CircularDoublyLinkedList circularDoublyLinkedList= new CircularDoublyLinkedList();
-        circularDoublyLinkedList.append(1);
-        circularDoublyLinkedList.append(2);
-        circularDoublyLinkedList.append(3);
-        circularDoublyLinkedList.append(4);
+        CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
+//        circularDoublyLinkedList.append(1);
+        circularDoublyLinkedList.insertAsc(2);
+//        circularDoublyLinkedList.append(3);
+        circularDoublyLinkedList.insertAsc(4);
 //        circularDoublyLinkedList.insertAtBegin(0);
-        circularDoublyLinkedList.insertAtPos(0,5);
-
+//        circularDoublyLinkedList.insertAtPos(0,5);
+        circularDoublyLinkedList.insertAsc(3);
+        circularDoublyLinkedList.insertAsc(5);
         circularDoublyLinkedList.traverse();
 
     }

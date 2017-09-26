@@ -77,9 +77,31 @@ public class CircularDoublyLinkedList {
     }
 
     public void insertAsc(int data) {
+        DNode newData= new DNode(data);
         if(isEmpty()){append(data);}
         else{
             DNode temp=head;
+            DNode prev=head;
+
+            while(temp.getData()<data){
+                prev=temp;
+                temp=temp.getNext();
+                if(temp==head) break;
+            }
+            if(temp==head){
+                prev.setNext(newData);
+                newData.setPrev(prev);
+                newData.setNext(head);
+                head.setPrev(newData);
+                size++;
+            }else{
+                newData.setNext(temp);
+                newData.setPrev(prev);
+                prev.setNext(newData);
+                temp.setPrev(newData);
+                size++;
+            }
+
 
         }
     }

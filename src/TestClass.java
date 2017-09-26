@@ -1,4 +1,5 @@
 import ElementaryDS.CircularDoublyLinkedList;
+import Stacks.StackWithLinkedList;
 
 public class TestClass {
     public static void main(String[] args) {
@@ -66,17 +67,28 @@ public class TestClass {
 //
 //        circularSinglyLinkedList.getMiddle();
 
-        CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
-//        circularDoublyLinkedList.append(1);
-        circularDoublyLinkedList.insertAsc(2);
-//        circularDoublyLinkedList.append(3);
-        circularDoublyLinkedList.insertAsc(4);
-//        circularDoublyLinkedList.insertAtBegin(0);
-//        circularDoublyLinkedList.insertAtPos(0,5);
-        circularDoublyLinkedList.insertAsc(3);
-        circularDoublyLinkedList.insertAsc(5);
-        circularDoublyLinkedList.traverse();
+//        CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
+////        circularDoublyLinkedList.append(1);
+//        circularDoublyLinkedList.insertAsc(2);
+////        circularDoublyLinkedList.append(3);
+//        circularDoublyLinkedList.insertAsc(4);
+////        circularDoublyLinkedList.insertAtBegin(0);
+////        circularDoublyLinkedList.insertAtPos(0,5);
+//        circularDoublyLinkedList.insertAsc(3);
+//        circularDoublyLinkedList.insertAsc(5);
+//        circularDoublyLinkedList.traverse();
 
+
+        StackWithLinkedList stack= new StackWithLinkedList();
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(4);
+        stack.push(5);
+stack.traverse();
+//stack.pop();
+stack.peek();
+stack.traverse();
     }
 
     //READ

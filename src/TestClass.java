@@ -1,4 +1,5 @@
 import ElementaryDS.CircularDoublyLinkedList;
+import Queues.QueueWithLinkedList;
 import Stacks.StackWithArrays;
 import Stacks.StackWithLinkedList;
 
@@ -94,11 +95,11 @@ public class TestClass {
 //        StackWithArrays stack=
 
         //    StackWithArrays
-        StackWithArrays stack= new StackWithArrays();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
+//        StackWithArrays stack= new StackWithArrays();
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(4);
 //
 //        stack.pop();
 //        stack.pop();
@@ -108,9 +109,27 @@ public class TestClass {
 //        stack.pop();
 //
 //        stack.peek();
-        stack.traverse();
+//        stack.traverse();
 
 
+        //QUEUES WITH LINKEDLIST
+        QueueWithLinkedList q= new QueueWithLinkedList();
+        q.enque(1);
+        q.enque(2);
+        q.enque(3);
+        q.enque(4);
+        q.enque(5);
+
+        q.traverse();
+
+        q.deque();
+        q.deque();
+        q.deque();
+        q.deque();
+        q.deque();
+        q.deque();
+        q.deque();
+        q.deque();
     }
 
     //READ

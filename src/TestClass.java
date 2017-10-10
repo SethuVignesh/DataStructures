@@ -1,4 +1,5 @@
 import ElementaryDS.CircularDoublyLinkedList;
+import Stacks.StackWithArrays;
 import Stacks.StackWithLinkedList;
 
 public class TestClass {
@@ -79,16 +80,37 @@ public class TestClass {
 //        circularDoublyLinkedList.traverse();
 
 
-        StackWithLinkedList stack= new StackWithLinkedList();
-//        stack.push(1);
-//        stack.push(2);
-//        stack.push(3);
-//        stack.push(4);
-        stack.push(5);
-stack.traverse();
-//stack.pop();
-stack.peek();
-stack.traverse();
+//        StackWithLinkedList stack= new StackWithLinkedList();
+////        stack.push(1);
+////        stack.push(2);
+////        stack.push(3);
+////        stack.push(4);
+//        stack.push(5);
+//stack.traverse();
+////stack.pop();
+//stack.peek();
+//stack.traverse();
+
+//        StackWithArrays stack=
+
+        //    StackWithArrays
+        StackWithArrays stack= new StackWithArrays();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+//
+//        stack.pop();
+//        stack.pop();
+//        stack.pop();
+//        stack.peek();
+//        stack.pop();
+//        stack.pop();
+//
+//        stack.peek();
+        stack.traverse();
+
+
     }
 
     //READ
@@ -97,4 +119,7 @@ stack.traverse();
 
     //DELETE
 //    }
+
+
+
 }
